@@ -265,4 +265,19 @@ svg{
     .pro .n1 span{
         font-size: 20px;
     }
+    #price{
+        font-size: 20px;
+    }
+    .pro .n1 div p{
+        font-size: 10px;
+    }
+    .controler{
+        display: none;
+    }
+    .slide img{
+        width: 300px;
+    }
+    .box{
+        height: 300px;
+    }
 }

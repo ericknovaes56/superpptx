@@ -12,12 +12,6 @@ right.addEventListener("click", ()=>{
     }
 })
 
-setInterval(() => {
-    move(300)
-    if (slide.scrollLeft + slide.clientWidth >= slide.scrollWidth){
-        move('-'+slide.clientWidth + slide.scrollLeft)
-    }
-}, 5000);
 function move(value){
     slide.scrollBy(value,0)
 }
