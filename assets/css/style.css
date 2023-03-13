@@ -1,0 +1,268 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+}
+:root{
+    --screenmargin: 30px;
+    --max-width:1364px;
+}
+.menu{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--screenmargin);
+    background-color: #131313b6;
+    color: white;
+    align-items: center;
+    z-index: 30;
+    top: 0;
+    backdrop-filter: blur(5px);
+}
+.navigator ul li{
+    list-style-type: none;
+}
+.navigator ul{
+    display: flex;
+    gap: 10px;
+}
+.navigator ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+header {
+    position: relative;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+}header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0.5;
+}
+header > .text{
+    z-index: 1;
+    color: white;
+    padding: 0 var(--screenmargin);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.text span{
+    font-size: 30px;
+    font-weight: bold;
+}
+.text h1{
+    font-size: 40px;
+    max-width: 600px;
+}
+.text input{
+    background-color: transparent;
+    font-weight: bold;
+    color: rgb(247, 104, 60);
+    width: 230px;
+    height: 50px;
+    border: 2px solid rgb(230, 60, 8);
+    cursor: pointer;
+    border-radius: 999px;
+    margin-top: 20px;
+}
+main{
+    transform: translateY(-40px);
+    display: flex;
+}
+.content{
+    padding: 0 var(--screenmargin);
+    display: flex;
+    width: 100%;
+}
+main .content .product{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.pro{
+    border: 2px solid rgb(90, 34, 17);
+    max-width: 400px;
+    width: 100%;
+    border-radius: 30px;
+    color: white;
+    padding: 20px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.pro img{
+    width: 160px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.pro .n1{
+    display: flex;
+    gap: 20px;
+}
+.pro .n1 div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.pro .n1 div p{
+    font-size: 14px;
+}
+.pro .n1 span{
+    font-size: 30px;
+}
+.price{
+    display: flex;
+    flex-direction: column;
+}
+#price{
+    font-size: 30px;
+}
+.buttom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttom input{
+     background-color: transparent;
+    font-weight: bold;
+    color: rgb(247, 104, 60);
+    width: 130px;
+    height: 50px;
+    border: 2px solid rgb(230, 60, 8);
+    cursor: pointer;
+    border-radius: 999px;
+    margin-top: 20px;
+}
+.packs{
+    padding: 0 var(--screenmargin);
+}
+.packs > div{
+    display: flex;
+    color: white;
+    gap: 15px;
+
+}
+.box{
+    width: 800px;
+    height: 400px;
+    background-color: #252525;
+    border-radius: 30px;
+    flex: none;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+}
+.box .slide{
+    display: flex;
+    gap: 20px;
+    overflow-x:scroll;
+    scroll-behavior: smooth;
+}
+.box .slide::-webkit-scrollbar{
+    display: none;
+}
+.box img{
+    height: 100%;
+    border-radius: 20px;
+    max-width: 500px;
+    flex-direction: column;
+    object-fit: cover;
+}
+.controler{
+    display: flex;
+    justify-content: space-between;
+}
+.controler input{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(230, 60, 8);
+    background-color: transparent;
+    color: rgb(247, 104, 60);
+    cursor: pointer;
+}
+#left{
+    transform: rotate(-180deg);
+}
+.gray{
+    height: 100px;
+    background-color: #273036;
+}
+.video{
+    margin-top: 30px;
+    padding: 0 var(--screenmargin);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.video iframe{
+    width: 100%;
+    height: 600px;
+    border-radius: 30px;
+}
+.video h1{
+    color: white;
+
+}
+.video span{
+    color: white;
+
+}
+svg{
+    transform: translateY(30px);
+}
+@media (max-width:1314px){
+    .pro{
+        max-width: 100%;
+    }
+}
+@media (max-width:1300px){
+    .packs > div{
+        flex-direction: column;
+    }
+    .box{
+        width: 100%;
+    }
+}
+@media (max-width:500px){
+    :root{
+        --screenmargin: 10px;
+    }
+    .video iframe{
+        height: 300px;
+    }
+    .pro .n1 span{
+        font-size: 20px;
+    }
+}
