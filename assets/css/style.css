@@ -10,6 +10,13 @@ html{
 body{
     background-color: black;
 }
+body::-webkit-scrollbar-thumb{
+    background-color: gray;
+}
+body::-webkit-scrollbar{
+    width: 3px;
+    background-color: rgba(255, 255, 255, 0);
+}
 :root{
     --screenmargin: 30px;
     --max-width:1364px;
@@ -241,6 +248,7 @@ main .content .product{
 }
 svg{
     transform: translateY(30px);
+    background-color: black;
 }
 @media (max-width:1314px){
     .pro{
@@ -253,6 +261,38 @@ svg{
     }
     .box{
         width: 100%;
+    }
+}
+@media (max-width:844px){
+    .links_footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .title_footer{
+        text-align: center;
+    }
+    .text_footer p{
+        text-align: center;
+    }
+    .links_of_foot{
+        align-items: center;
+    }
+    .coluna_footer li{
+        display: flex;
+        justify-content: center;
+    }
+    .video{
+        margin-top: 100px;
+    }
+    .text h1{
+        font-size: 25px;
+    }
+}
+@media (max-width:654px){
+    .init_footer h2{
+        font-size: 13px;
     }
 }
 @media (max-width:500px){
@@ -280,4 +320,70 @@ svg{
     .box{
         height: 300px;
     }
+}
+footer{
+    min-height: 330px;
+    background-color: #1b1c1daf;
+    border-radius: 70px 70px 0 0;
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    flex-direction: column;
+    padding:  0 50px;
+    box-sizing: border-box;
+    margin-top: 180px;
+}
+.init_footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+    color: white;
+    justify-content: space-between;
+}
+.init_footer h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.text_footer div{
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+.text_footer p{
+    max-width: 300px;
+    text-align: justify;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title_footer{
+    max-width: 300px;
+    text-align: justify;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.links_footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+}
+.coluna_footer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.coluna_footer li{
+    list-style-type: none;
+}
+.links_of_footer{
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.links_of_footer:hover{
+    filter: brightness(0.95);
 }
